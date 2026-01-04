@@ -70,12 +70,15 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
   `,
   styles: [`
     .policies-hero {
-      background: var(--background-light);
+      background: linear-gradient(135deg, var(--background-light) 0%, var(--background-warm) 100%);
       text-align: center;
+      padding: var(--spacing-3xl) 0;
     }
 
     .policies-hero h1 {
-      margin-bottom: 1rem;
+      margin-bottom: var(--spacing-md);
+      color: var(--primary-color);
+      font-family: 'Poppins', sans-serif;
     }
 
     .lead {
@@ -83,6 +86,8 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
       color: var(--text-secondary);
       max-width: 800px;
       margin: 0 auto;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
     }
 
     .policy-category {
@@ -101,16 +106,25 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
     }
 
     .policy-item {
-      padding: 1.5rem;
+      padding: var(--spacing-xl);
       background: var(--background-light);
-      border-radius: 0.5rem;
+      border-radius: var(--radius-md);
       border-left: 4px solid var(--primary-color);
+      transition: all 0.2s ease;
+    }
+
+    .policy-item:hover {
+      background: var(--background-warm);
+      transform: translateX(4px);
+      box-shadow: var(--shadow-sm);
     }
 
     .policy-item h4 {
-      margin: 0 0 0.5rem 0;
+      margin: 0 0 var(--spacing-sm) 0;
       color: var(--primary-color);
       font-size: 1.125rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
     }
 
     .policy-item p {

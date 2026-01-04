@@ -90,12 +90,15 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
   `,
   styles: [`
     .transparency-hero {
-      background: var(--background-light);
+      background: linear-gradient(135deg, var(--background-light) 0%, var(--background-warm) 100%);
       text-align: center;
+      padding: var(--spacing-3xl) 0;
     }
 
     .transparency-hero h1 {
-      margin-bottom: 1rem;
+      margin-bottom: var(--spacing-md);
+      color: var(--primary-color);
+      font-family: 'Poppins', sans-serif;
     }
 
     .lead {
@@ -103,10 +106,12 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
       color: var(--text-secondary);
       max-width: 800px;
       margin: 0 auto;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
     }
 
     .indicators-section {
-      background: white;
+      background: var(--background);
     }
 
     .indicators-section h2 {
@@ -179,15 +184,15 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
     }
 
     .trend-up {
-      color: var(--secondary-color);
+      color: var(--primary-lighter);
     }
 
     .trend-down {
-      color: #ef4444;
+      color: var(--error-color);
     }
 
     .trend-stable {
-      color: var(--text-secondary);
+      color: var(--secondary-color);
     }
 
     .reports-section {

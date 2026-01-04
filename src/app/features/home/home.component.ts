@@ -100,34 +100,63 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
   `,
   styles: [`
     .hero {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--primary-light) 100%);
       color: white;
-      padding: 6rem 0;
+      padding: var(--spacing-3xl) 0;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(111, 191, 115, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(141, 110, 99, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
     }
 
     .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 3.5rem;
+      margin-bottom: var(--spacing-md);
       color: white;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      letter-spacing: -0.02em;
     }
 
     .hero-subtitle {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      opacity: 0.9;
+      font-size: 1.75rem;
+      margin-bottom: var(--spacing-md);
+      opacity: 0.95;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.95);
     }
 
     .hero-description {
-      font-size: 1.125rem;
-      max-width: 600px;
-      margin: 0 auto 2rem;
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto var(--spacing-2xl);
       opacity: 0.9;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
     }
 
     .hero-actions {
       display: flex;
-      gap: 1rem;
+      gap: var(--spacing-md);
       justify-content: center;
       flex-wrap: wrap;
     }
@@ -138,13 +167,15 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
 
     .indicators-section h2 {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: var(--spacing-2xl);
+      color: var(--primary-color);
+      font-family: 'Poppins', sans-serif;
     }
 
     .indicators-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      gap: var(--spacing-xl);
     }
 
     .indicators-list {
@@ -176,49 +207,56 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
     }
 
     .indicator-value {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       font-weight: 700;
       color: var(--primary-color);
-      margin-bottom: 0.5rem;
+      margin-bottom: var(--spacing-sm);
+      font-family: 'Poppins', sans-serif;
     }
 
     .indicator-unit {
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: 500;
       color: var(--text-secondary);
+      font-family: 'Inter', sans-serif;
     }
 
     .indicator-description {
-      font-size: 0.875rem;
+      font-size: 0.9375rem;
       color: var(--text-secondary);
       margin: 0;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
     }
 
     .trend {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
+      font-weight: 600;
     }
 
     .trend-up {
-      color: var(--secondary-color);
+      color: var(--primary-lighter);
     }
 
     .trend-down {
-      color: #ef4444;
+      color: var(--error-color);
     }
 
     .trend-stable {
-      color: var(--text-secondary);
+      color: var(--secondary-color);
     }
 
     .features-section h2 {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: var(--spacing-2xl);
+      color: var(--primary-color);
+      font-family: 'Poppins', sans-serif;
     }
 
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
+      gap: var(--spacing-xl);
     }
 
     .features-grid app-card {
@@ -226,21 +264,30 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
     }
 
     .features-grid .btn {
-      margin-top: 1rem;
+      margin-top: var(--spacing-md);
     }
 
     @media (max-width: 768px) {
+      .hero {
+        padding: var(--spacing-2xl) 0;
+      }
+
       .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.25rem;
       }
 
       .hero-subtitle {
-        font-size: 1.25rem;
+        font-size: 1.375rem;
+      }
+
+      .hero-description {
+        font-size: 1.125rem;
       }
 
       .indicators-grid,
       .features-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
       }
     }
   `],

@@ -1,87 +1,198 @@
-/* Global Styles */
+/* ============================================
+   FONAVE - Sistema de Diseño Institucional
+   Basado en identidad visual: árbol, crecimiento, confianza
+   ============================================ */
+
+/* Reset y Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ============================================
+   PALETA DE COLORES FONAVE
+   ============================================ */
 :root {
-  --primary-color: #1e3a8a;
-  --primary-dark: #1e40af;
-  --primary-light: #3b82f6;
-  --secondary-color: #059669;
-  --accent-color: #f59e0b;
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
-  --background: #ffffff;
-  --background-light: #f9fafb;
-  --border-color: #e5e7eb;
-  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  /* Colores Primarios - Verdes (Crecimiento, Ahorro, Estabilidad) */
+  --primary-color: #2E7D32;        /* Verde principal institucional */
+  --primary-dark: #1B5E20;          /* Verde oscuro para hover/énfasis */
+  --primary-light: #4CAF50;         /* Verde medio para estados activos */
+  --primary-lighter: #6FBF73;        /* Verde claro (hojas) - progreso y bienestar */
+  
+  /* Colores Secundarios - Tierra (Solidez, Raíces, Respaldo) */
+  --secondary-color: #8D6E63;       /* Marrón tierra - solidez */
+  --secondary-light: #A1887F;       /* Marrón claro */
+  --secondary-dark: #5D4037;        /* Marrón oscuro */
+  
+  /* Fondos Neutros y Cálidos */
+  --background: #FFFFFF;             /* Blanco institucional */
+  --background-light: #F4F1EC;      /* Beige claro - fondo cálido y neutro */
+  --background-warm: #FAF8F5;       /* Beige muy claro para secciones */
+  
+  /* Texto */
+  --text-primary: #1B1B1B;          /* Negro suave para texto principal */
+  --text-secondary: #6B7280;        /* Gris suave para texto secundario */
+  --text-muted: #9CA3AF;            /* Gris más claro para texto deshabilitado */
+  
+  /* Bordes y Divisores */
+  --border-color: #E5E7EB;          /* Gris muy claro para bordes */
+  --border-warm: #E8E5E0;           /* Beige para bordes en fondos cálidos */
+  
+  /* Estados y Feedback */
+  --success-color: #2E7D32;         /* Verde para éxito */
+  --success-light: #C8E6C9;         /* Verde muy claro para fondos de éxito */
+  --warning-color: #F59E0B;         /* Ámbar para advertencias */
+  --error-color: #D32F2F;           /* Rojo para errores */
+  --info-color: #1976D2;            /* Azul para información */
+  
+  /* Sombras (suaves y naturales) */
+  --shadow-sm: 0 1px 2px 0 rgba(46, 125, 50, 0.05);
+  --shadow: 0 1px 3px 0 rgba(46, 125, 50, 0.1), 0 1px 2px 0 rgba(46, 125, 50, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(46, 125, 50, 0.1), 0 2px 4px -1px rgba(46, 125, 50, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(46, 125, 50, 0.1), 0 4px 6px -2px rgba(46, 125, 50, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(46, 125, 50, 0.1), 0 10px 10px -5px rgba(46, 125, 50, 0.04);
+  
+  /* Espaciado */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Bordes redondeados */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
 }
 
+/* ============================================
+   TIPOGRAFÍA
+   ============================================ */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: var(--text-primary);
   background-color: var(--background);
-  line-height: 1.6;
+  line-height: 1.7;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
+/* Tipografía para Títulos - Poppins (Elegante y Moderna) */
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  line-height: 1.3;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
+  font-weight: 600;
 }
 
 h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h4 {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* Tipografía para Contenido - Inter (Legible y Neutra) */
 p {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.7;
+  color: var(--text-primary);
 }
 
+.lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Enlaces */
 a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  font-weight: 500;
 }
 
 a:hover {
   color: var(--primary-dark);
+  text-decoration: underline;
 }
 
+a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================
+   LAYOUT Y CONTENEDORES
+   ============================================ */
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--spacing-md);
 }
 
 .section {
-  padding: 4rem 0;
+  padding: var(--spacing-3xl) 0;
 }
 
+.section-alt {
+  background-color: var(--background-light);
+  padding: var(--spacing-3xl) 0;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.875rem 1.75rem;
   border: none;
-  border-radius: 0.375rem;
+  border-radius: var(--radius-md);
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
+  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   text-align: center;
+  text-decoration: none;
+  line-height: 1.5;
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-primary {
@@ -91,8 +202,15 @@ a:hover {
 
 .btn-primary:hover {
   background-color: var(--primary-dark);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+  text-decoration: none;
+  color: white;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary {
@@ -101,24 +219,164 @@ a:hover {
 }
 
 .btn-secondary:hover {
-  background-color: #047857;
-  transform: translateY(-1px);
+  background-color: var(--secondary-dark);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+  text-decoration: none;
+  color: white;
 }
 
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+button:disabled,
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
 .card {
-  background: white;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
+  background: var(--background);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
   box-shadow: var(--shadow);
-  transition: box-shadow 0.2s ease;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .card:hover {
   box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
-/* Responsive */
+.card-elevated {
+  box-shadow: var(--shadow-lg);
+}
+
+.card-warm {
+  background-color: var(--background-warm);
+  border-color: var(--border-warm);
+}
+
+/* ============================================
+   BADGES Y ETIQUETAS
+   ============================================ */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.badge-success {
+  background-color: var(--success-light);
+  color: var(--success-color);
+}
+
+.badge-primary {
+  background-color: rgba(46, 125, 50, 0.1);
+  color: var(--primary-color);
+}
+
+.badge-secondary {
+  background-color: rgba(141, 110, 99, 0.1);
+  color: var(--secondary-color);
+}
+
+/* ============================================
+   FORMULARIOS
+   ============================================ */
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: var(--background);
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.form-control.error {
+  border-color: var(--error-color);
+}
+
+.form-control.error:focus {
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.bg-light {
+  background-color: var(--background-light);
+}
+
+.bg-warm {
+  background-color: var(--background-warm);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -128,8 +386,34 @@ a:hover {
     font-size: 1.75rem;
   }
 
+  h3 {
+    font-size: 1.5rem;
+  }
+
   .section {
-    padding: 2rem 0;
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .lead {
+    font-size: 1.125rem;
+  }
+}

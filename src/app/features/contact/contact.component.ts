@@ -130,12 +130,15 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
   `,
   styles: [`
     .contact-hero {
-      background: var(--background-light);
+      background: linear-gradient(135deg, var(--background-light) 0%, var(--background-warm) 100%);
       text-align: center;
+      padding: var(--spacing-3xl) 0;
     }
 
     .contact-hero h1 {
-      margin-bottom: 1rem;
+      margin-bottom: var(--spacing-md);
+      color: var(--primary-color);
+      font-family: 'Poppins', sans-serif;
     }
 
     .lead {
@@ -143,6 +146,8 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
       color: var(--text-secondary);
       max-width: 800px;
       margin: 0 auto;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
     }
 
     .contact-grid {
@@ -165,16 +170,17 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
     }
 
     .contact-icon {
-      font-size: 2rem;
-      width: 50px;
-      height: 50px;
+      font-size: 1.75rem;
+      width: 56px;
+      height: 56px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--primary-color);
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
       color: white;
       border-radius: 50%;
       flex-shrink: 0;
+      box-shadow: var(--shadow-sm);
     }
 
     .contact-details h4 {
@@ -210,33 +216,35 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
     .form-control:focus {
       outline: none;
       border-color: var(--primary-color);
-      box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+      box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
     }
 
     .form-control.error {
-      border-color: #ef4444;
+      border-color: var(--error-color);
     }
 
     .error-message {
       display: block;
-      color: #ef4444;
+      color: var(--error-color);
       font-size: 0.875rem;
-      margin-top: 0.25rem;
+      margin-top: var(--spacing-xs);
+      font-family: 'Inter', sans-serif;
     }
 
     .submit-message {
-      padding: 1rem;
-      border-radius: 0.375rem;
-      margin-bottom: 1rem;
-      background: #fef3c7;
+      padding: var(--spacing-md);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--spacing-md);
+      background: rgba(245, 158, 11, 0.1);
       color: #92400e;
-      border: 1px solid #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      font-family: 'Inter', sans-serif;
     }
 
     .submit-message.success {
-      background: #d1fae5;
-      color: #065f46;
-      border-color: var(--secondary-color);
+      background: var(--success-light);
+      color: var(--success-color);
+      border-color: var(--primary-lighter);
     }
 
     button[disabled] {

@@ -38,18 +38,19 @@ import { RouterModule } from '@angular/router';
   `,
   styles: [`
     .header {
-      background: white;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background: var(--background);
+      box-shadow: var(--shadow);
       position: sticky;
       top: 0;
       z-index: 1000;
+      border-bottom: 1px solid var(--border-color);
     }
 
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 0;
+      padding: 1.25rem 0;
     }
 
     .navbar-brand .logo {
@@ -57,39 +58,61 @@ import { RouterModule } from '@angular/router';
       flex-direction: column;
       text-decoration: none;
       color: var(--primary-color);
+      transition: all 0.2s ease;
+    }
+
+    .navbar-brand .logo:hover {
+      color: var(--primary-dark);
     }
 
     .navbar-brand h1 {
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .subtitle {
       font-size: 0.75rem;
       color: var(--text-secondary);
       font-weight: 400;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 0.125rem;
     }
 
     .navbar-nav {
       display: flex;
       list-style: none;
-      gap: 2rem;
+      gap: 2.5rem;
       margin: 0;
       padding: 0;
+      align-items: center;
     }
 
     .navbar-nav a {
       color: var(--text-primary);
       font-weight: 500;
+      font-family: 'Inter', sans-serif;
       padding: 0.5rem 0;
-      transition: color 0.2s ease;
+      transition: all 0.2s ease;
       position: relative;
+      font-size: 0.9375rem;
     }
 
-    .navbar-nav a:hover,
+    .navbar-nav a:hover {
+      color: var(--primary-color);
+    }
+
     .navbar-nav a.active {
       color: var(--primary-color);
+      font-weight: 600;
     }
 
     .navbar-nav a.active::after {
@@ -98,25 +121,45 @@ import { RouterModule } from '@angular/router';
       bottom: 0;
       left: 0;
       right: 0;
-      height: 2px;
-      background: var(--primary-color);
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-lighter) 100%);
+      border-radius: var(--radius-sm) var(--radius-sm) 0 0;
     }
 
     .menu-toggle {
       display: none;
       flex-direction: column;
-      gap: 4px;
+      gap: 5px;
       background: none;
       border: none;
       cursor: pointer;
       padding: 0.5rem;
+      border-radius: var(--radius-sm);
+      transition: background-color 0.2s ease;
+    }
+
+    .menu-toggle:hover {
+      background-color: var(--background-light);
     }
 
     .menu-toggle span {
       width: 25px;
       height: 3px;
-      background: var(--text-primary);
+      background: var(--primary-color);
       transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
     }
 
     @media (max-width: 768px) {
@@ -129,15 +172,16 @@ import { RouterModule } from '@angular/router';
         top: 100%;
         left: 0;
         right: 0;
-        background: white;
+        background: var(--background);
         flex-direction: column;
-        padding: 1rem;
+        padding: var(--spacing-md);
         gap: 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow-lg);
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
+        border-top: 1px solid var(--border-color);
       }
 
       .navbar-nav.active {
@@ -147,12 +191,27 @@ import { RouterModule } from '@angular/router';
       }
 
       .navbar-nav li {
-        padding: 0.75rem 0;
+        padding: 0.875rem 0;
         border-bottom: 1px solid var(--border-color);
+        width: 100%;
       }
 
       .navbar-nav li:last-child {
         border-bottom: none;
+      }
+
+      .navbar-nav a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+      }
+
+      .navbar-nav a.active::after {
+        display: none;
+      }
+
+      .navbar-brand h1 {
+        font-size: 1.5rem;
       }
     }
   `]

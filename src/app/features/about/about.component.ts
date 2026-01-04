@@ -64,12 +64,15 @@ import { CardComponent } from '../../shared/components/card/card.component';
   `,
   styles: [`
     .about-hero {
-      background: var(--background-light);
+      background: linear-gradient(135deg, var(--background-light) 0%, var(--background-warm) 100%);
       text-align: center;
+      padding: var(--spacing-3xl) 0;
     }
 
     .about-hero h1 {
-      margin-bottom: 1rem;
+      margin-bottom: var(--spacing-md);
+      color: var(--primary-color);
+      font-family: 'Poppins', sans-serif;
     }
 
     .lead {
@@ -77,13 +80,15 @@ import { CardComponent } from '../../shared/components/card/card.component';
       color: var(--text-secondary);
       max-width: 800px;
       margin: 0 auto;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
     }
 
     .about-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-bottom: 3rem;
+      gap: var(--spacing-xl);
+      margin-bottom: var(--spacing-2xl);
     }
 
     .values-list {
@@ -93,8 +98,13 @@ import { CardComponent } from '../../shared/components/card/card.component';
     }
 
     .values-list li {
-      padding: 0.75rem 0;
+      padding: var(--spacing-md) 0;
       border-bottom: 1px solid var(--border-color);
+      transition: padding-left 0.2s ease;
+    }
+
+    .values-list li:hover {
+      padding-left: var(--spacing-sm);
     }
 
     .values-list li:last-child {
@@ -104,12 +114,17 @@ import { CardComponent } from '../../shared/components/card/card.component';
     .values-list strong {
       color: var(--primary-color);
       display: block;
-      margin-bottom: 0.25rem;
+      margin-bottom: var(--spacing-xs);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.0625rem;
     }
 
     .history-section h2 {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: var(--spacing-xl);
+      color: var(--primary-color);
+      font-family: 'Poppins', sans-serif;
     }
 
     .history-section app-card p {
