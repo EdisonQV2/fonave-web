@@ -24,7 +24,7 @@ export class IndicatorService {
           {
             id: '1',
             name: 'Total de Fondos',
-            value: 'MXN $51,000,000',
+            value: 'COP $100,000,000',
             description: 'Capital total administrado',
             trend: 'up',
             lastUpdate: new Date()
@@ -32,7 +32,7 @@ export class IndicatorService {
           {
             id: '2',
             name: 'Número de Afiliados',
-            value: 1250,
+            value: 24,
             unit: 'afiliados',
             trend: 'up',
             lastUpdate: new Date()
@@ -45,7 +45,7 @@ export class IndicatorService {
           {
             id: '3',
             name: 'Tasa de Rendimiento Anual',
-            value: 8.5,
+            value: 9.0,
             unit: '%',
             description: 'Promedio anual',
             trend: 'stable',
