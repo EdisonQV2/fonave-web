@@ -23,7 +23,7 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>Juan Pablo Q, Bienvenido a FONAVE</h1>
+          <h1>JP. Bienvenido a FONAVE</h1>
           <p class="hero-subtitle">Fondo de Ahorro Familiar</p>
           <p class="hero-description">
             Comprometidos con el crecimiento del ahorro familiar y la transparencia en la gestión de recursos.
