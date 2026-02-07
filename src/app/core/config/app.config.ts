@@ -9,7 +9,7 @@ export const APP_CONFIG = {
   contact: {
     email: 'contacto@fonave.com',
     phone: '+52 (55) 1234-5678',
-    address: 'Ciudad de México, México'
+    address: 'Ciudad de Bogotá, Colombia'
   }
 } as const;
 

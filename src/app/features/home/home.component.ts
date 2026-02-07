@@ -6,7 +6,6 @@ import { IndicatorGroup } from '../../core/models/indicator.model';
 import { IndicatorService } from '../../core/services/indicator.service';
 import { CardComponent } from '../../shared/components/card/card.component';
 import { LoadingComponent } from '../../shared/components/loading/loading.component';
-import { CurrencyFormatPipe } from '../../shared/pipes/currency-format.pipe';
 import { TrackByUtil } from '../../shared/utils/track-by.util';
 
 @Component({
@@ -16,14 +15,13 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
     CommonModule,
     RouterModule,
     CardComponent,
-    LoadingComponent,
-    CurrencyFormatPipe
+    LoadingComponent
   ],
   template: `
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>JP. Bienvenido a FONAVE</h1>
+          <h1>Bienvenido a FONAVE</h1>
           <p class="hero-subtitle">Fondo de Ahorro Familiar</p>
           <p class="hero-description">
             Comprometidos con el crecimiento del ahorro familiar y la transparencia en la gestión de recursos.

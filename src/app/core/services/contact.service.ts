@@ -31,7 +31,7 @@ export class ContactService {
       {
         type: 'address',
         label: 'Dirección',
-        value: 'Ciudad de México, México',
+        value: 'Ciudad de Bogotá, Colombia',
         icon: 'location'
       }
     ];
@@ -44,10 +44,7 @@ export class ContactService {
    * En el futuro, esto enviará a una API
    */
   submitContactForm(form: ContactForm): Observable<{ success: boolean; message: string }> {
-    // Simulación de envío
-    console.log('Formulario de contacto:', form);
-    
-    // En producción, aquí se haría una llamada HTTP
+    // Simulación de envío. En producción, aquí se haría una llamada HTTP
     return of({
       success: true,
       message: 'Mensaje enviado correctamente. Nos pondremos en contacto pronto.'
