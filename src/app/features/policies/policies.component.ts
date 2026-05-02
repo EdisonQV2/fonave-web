@@ -22,8 +22,7 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
       <div class="container">
         <h1>Políticas y Documentos</h1>
         <p class="lead">
-          Accede a nuestros reglamentos, procedimientos y documentos normativos que rigen
-          el funcionamiento del fondo.
+         Conoce los principios, lineamientos y fundamentos que orientan el funcionamiento de FONAVE. Nuestra gestión se basa en la preservación del capital, la inversión responsable, la transparencia financiera y la construcción de patrimonio sostenible para las familias que integran el fondo.
         </p>
       </div>
     </section>
@@ -156,10 +155,10 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
 })
 export class PoliciesComponent implements OnInit {
   policies$!: Observable<PolicyCategory[]>;
-  
+
   trackById = TrackByUtil.id;
 
-  constructor(private policyService: PolicyService) {}
+  constructor(private policyService: PolicyService) { }
 
   ngOnInit(): void {
     this.policies$ = this.policyService.getPolicies();

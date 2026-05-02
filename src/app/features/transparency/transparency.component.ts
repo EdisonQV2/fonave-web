@@ -22,8 +22,7 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
       <div class="container">
         <h1>Transparencia</h1>
         <p class="lead">
-          Creemos en la transparencia como base de la confianza. Aquí encontrarás información
-          actualizada sobre nuestros indicadores y operaciones.
+         Creemos en la confianza, la disciplina financiera y la transparencia como base para construir patrimonio sostenible. En FONAVE, cada aporte representa una decisión consciente de fortalecer el bienestar familiar, transformar el ahorro en oportunidades de inversión y construir un legado financiero entre generaciones.
         </p>
       </div>
     </section>
