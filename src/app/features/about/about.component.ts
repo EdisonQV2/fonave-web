@@ -21,8 +21,7 @@ import { CardComponent } from '../../shared/components/card/card.component';
         <div class="about-grid">
           <app-card title="Nuestra Misión">
             <p>
-              Promover el ahorro familiar mediante la gestión transparente y responsable de recursos,
-              contribuyendo al bienestar económico de nuestros afiliados.
+              Construir un legado financiero para las familias que integran FONAVE a travéz del ahorro diciplinado, la confianza y la inverción inteligente.
             </p>
           </app-card>
 

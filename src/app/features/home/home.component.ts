@@ -24,7 +24,7 @@ import { TrackByUtil } from '../../shared/utils/track-by.util';
           <h1>Bienvenido a FONAVE</h1>
           <p class="hero-subtitle">Fondo de Ahorro Familiar</p>
           <p class="hero-description">
-            Comprometidos con el crecimiento del ahorro familiar y la transparencia en la gestión de recursos.
+           Fomentar el ahorro familiar para cumplir metas financieras y brindar créditos accesibles a sus integrantes.
           </p>
           <div class="hero-actions">
             <a routerLink="/about" class="btn btn-primary">Conoce más</a>
